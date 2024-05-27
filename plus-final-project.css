@@ -1,16 +1,26 @@
 body {
-  background: #f9f7fe;
+  background: #90f6d7;
+  background-size: cover;
   font-family: Roboto Slab;
 }
 a {
   color: #00aaa0;
 }
 .weather-app {
-  background-color: white;
-  margin: 60px auto;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(222, 168, 248) 0%,
+    rgb(168, 222, 248) 21.8%,
+    rgb(189, 250, 205) 35.6%,
+    rgb(243, 250, 189) 52.9%,
+    rgb(250, 227, 189) 66.8%,
+    rgb(248, 172, 172) 90%,
+    rgb(254, 211, 252) 99.7%
+  );
+  margin: 100px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
-  border-radius: 10px;
-  max-width: 600px;
+  border-radius: 30px;
+  max-width: 700px;
   padding: 30px;
 }
 .placeholder {
@@ -51,10 +61,10 @@ main {
   position: relative;
   top: -38px;
 }
-p strong {
+h2 strong {
   color: #c31207;
 }
-p {
+h2 {
   font-size: 18px;
   line-height: 20px;
 }
@@ -71,6 +81,26 @@ footer {
 }
 .daily-forecast {
   margin-top: 30px;
-  display: flex;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+p {
+  border: 1px solid #ffff;
+  border-radius: 8px;
+  box-shadow: 2px 2px #00aaa0;
+  padding: 10px;
+  display: block;
+  justify-content: space-between 15px;
+  background-color: #ffb5b5;
+}
+.day {
+  text-decoration-color: #0000;
+}
+.forecast-max-temperature {
+  opacity: 0.5;
+}
+.forecast-min-temperature {
+  padding-left: 7px;
+  text-decoration-color: #0000;
 }
