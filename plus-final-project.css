@@ -69,3 +69,8 @@ footer {
   text-align: center;
   border-top: 1px solid #f9f7fe;
 }
+.daily-forecast {
+  margin-top: 30px;
+  display: flex;
+  text-align: center;
+}
