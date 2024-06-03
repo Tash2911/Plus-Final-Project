@@ -39,6 +39,7 @@ function formatDate(date) {
 }
 
 function searchCity(city) {
+  let apiKey = "5804cet5d8681bbaa2c0f31803d6o3f5";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}& units=metric or imperial`;
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -57,21 +58,29 @@ function getForecast(city) {
 
 function displayForecast(response) {
   console.log(response.data);
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
   let forecastHTML = "";
 
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<p>
+  response.data.daily.forEach(function (day, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<p>
       <span class="day"> 
-        ${day}</span>
+        Tue</span>
         <br/>
-        <span><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" width="36" id="forecast-icon"> </span> 
+        <span><img src="${
+          day.condition.icon_url
+        }"class="forecast-icon"> </span> 
         <br/>
-       <span class="forecast-max-temperature"> <strong>18°C</strong> </span>
-       <span class="forecast-min-temperature"> 7°C </span>
+       <span class="forecast-max-temperature"> <strong>${Math.round(
+         day.temperature.maximum
+       )}º</strong> </span>
+       <span class="forecast-min-temperature"> ${Math.round(
+         day.temperature.minimum
+       )}º </span>
        </p>`;
+    }
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
