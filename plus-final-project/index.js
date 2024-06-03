@@ -70,8 +70,8 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `<p>
-      <span class="day"> 
-        ${formatDay(day.time)}</span>
+      <span class="day"> <strong>
+        ${formatDay(day.time)}</strong></span>
         <br/>
         <span><img src="${
           day.condition.icon_url
@@ -80,9 +80,9 @@ function displayForecast(response) {
        <span class="forecast-max-temperature"> <strong>${Math.round(
          day.temperature.maximum
        )}º</strong> </span>
-       <span class="forecast-min-temperature"> ${Math.round(
+       <span class="forecast-min-temperature"><strong> ${Math.round(
          day.temperature.minimum
-       )}º </span>
+       )}º </strong></span>
        </p>`;
     }
   });

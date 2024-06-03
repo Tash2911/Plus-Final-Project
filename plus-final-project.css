@@ -1,4 +1,5 @@
 body {
+  background-image: url("https://getwallpapers.com/wallpaper/full/a/e/5/567221.jpg");
 }
 a {
   color: #00aaa0;
@@ -93,15 +94,16 @@ p {
   background-color: #ffb5b5;
 }
 .day {
-  text-decoration-color: #0000;
+  text-decoration-color: #00aaa0;
+  color: #00aaa0;
 }
 .forecast-icon {
   width: 60px;
 }
 .forecast-max-temperature {
-  opacity: 0.5;
+  text-decoration-color: #c31207;
 }
 .forecast-min-temperature {
   padding-left: 8px;
-  text-decoration-color: #0000;
+  color: #c31207;
 }
