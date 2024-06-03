@@ -1,7 +1,4 @@
 body {
-  background: #90f6d7;
-  background-size: cover;
-  font-family: Roboto Slab;
 }
 a {
   color: #00aaa0;
@@ -22,6 +19,7 @@ a {
   border-radius: 30px;
   max-width: 700px;
   padding: 30px;
+  font-family: Roboto Slab;
 }
 .placeholder {
   background: #f9f7fe;
